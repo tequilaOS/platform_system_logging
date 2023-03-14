@@ -262,7 +262,7 @@ int __android_log_is_loggable(int prio, const char* tag, int default_prio) {
 }
 
 int __android_log_is_debuggable() {
-#ifdef DEBUGGABLE
+#ifdef ANDROID_DEBUGGABLE
   return 1;
 #else
   static int is_debuggable = [] {
